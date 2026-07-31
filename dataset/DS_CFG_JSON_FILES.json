@@ -1,0 +1,35 @@
+{
+	"name": "DS_CFG_JSON_FILES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS 2026ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "gitFileList.json",
+				"fileSystem": "config"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pm_base_url": {
+					"type": "string"
+				},
+				"pm_relative_url": {
+					"type": "string"
+				},
+				"pm_dir_name": {
+					"type": "string"
+				},
+				"pm_file_name": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
