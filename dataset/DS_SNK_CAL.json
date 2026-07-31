@@ -1,0 +1,20 @@
+{
+	"name": "DS_SNK_CAL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS 2026ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "AdventureWorks_Calendar",
+				"fileSystem": "con2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
