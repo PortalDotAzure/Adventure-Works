@@ -1,0 +1,15 @@
+{
+	"name": "srujan2026adf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cfc6b6d0-5b92-41ad-a953-4ebe9159b218",
+		"tenantId": "39511314-3a12-49b6-8106-e8f13a4dbba0"
+	}
+}
