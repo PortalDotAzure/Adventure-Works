@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "srujan2026adf"
+		},
+		"LS 2026ADLS_accountKey": {
+			"value": ""
+		},
+		"ls_srujan2026adls_accountKey": {
+			"value": ""
+		},
+		"LS 2026ADLS_properties_typeProperties_url": {
+			"value": "https://srujan2026adls.dfs.core.windows.net/"
+		},
+		"LS SC GIT_properties_typeProperties_url": {
+			"value": "@{linkedService().pm_base_url}"
+		},
+		"ls_srujan2026adls_properties_typeProperties_url": {
+			"value": "https://srujan2026adls.dfs.core.windows.net/"
+		}
+	}
+}
