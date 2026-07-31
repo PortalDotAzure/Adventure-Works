@@ -1,0 +1,72 @@
+{
+	"name": "PL GIT TO ADLS",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data from git to adls con 1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_SC_GIT_FILES",
+						"type": "DatasetReference",
+						"parameters": {
+							"pm_relative_url": "ss"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_SK_CON1",
+						"type": "DatasetReference",
+						"parameters": {
+							"pm_dir_name": "ss",
+							"pm_file_name": "ss"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
