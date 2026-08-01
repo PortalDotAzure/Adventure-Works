@@ -1,0 +1,46 @@
+{
+	"name": "DS_SK_SQLDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS SQL DB",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"p_userName": {
+					"value": "@dataset().p_userName",
+					"type": "Expression"
+				},
+				"p_password": {
+					"value": "@dataset().p_password",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"p_userName": {
+				"type": "string"
+			},
+			"p_password": {
+				"type": "string"
+			},
+			"p_schema": {
+				"type": "string"
+			},
+			"p_tableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().p_schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().p_tableName",
+				"type": "Expression"
+			}
+		}
+	}
+}

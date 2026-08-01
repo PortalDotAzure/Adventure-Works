@@ -1,0 +1,28 @@
+{
+	"name": "DS_SC_SQLJSONLIST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS projectadv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "sqljsonfilelist.json",
+				"fileSystem": "config"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "[",
+				"type": "String"
+			}
+		]
+	}
+}
