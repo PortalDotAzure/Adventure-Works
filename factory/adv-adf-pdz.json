@@ -1,0 +1,15 @@
+{
+	"name": "adv-adf-pdz",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c45c0a44-62a6-4e2a-b835-085f2336b003",
+		"tenantId": "39511314-3a12-49b6-8106-e8f13a4dbba0"
+	}
+}
