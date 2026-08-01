@@ -1,21 +1,15 @@
 {
-	"name": "DS_SC_GIT_FILES",
+	"name": "DS_SK_RAW_FILES",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS GIT",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"pBaseURL": {
-					"value": "@dataset().pBaseURL",
-					"type": "Expression"
-				}
-			}
+			"referenceName": "LS projectadv",
+			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"pBaseURL": {
+			"pFolderName": {
 				"type": "string"
 			},
-			"pRelativeURL": {
+			"pFileName": {
 				"type": "string"
 			}
 		},
@@ -23,11 +17,16 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": {
-					"value": "@dataset().pRelativeURL",
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().pFileName",
 					"type": "Expression"
-				}
+				},
+				"folderPath": {
+					"value": "@dataset().pFolderName",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
