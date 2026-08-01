@@ -1,0 +1,29 @@
+{
+	"name": "DS_SC_GIT_FILES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS GIT",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pBaseURL": {
+				"type": "string"
+			},
+			"pRelativeURL": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
