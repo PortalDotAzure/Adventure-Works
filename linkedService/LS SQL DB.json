@@ -1,0 +1,28 @@
+{
+	"name": "LS SQL DB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"p_userName": {
+				"type": "string"
+			},
+			"p_password": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adventureworks-sql-srujan.database.windows.net",
+			"database": "AdventureWorks_ETL",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "@{linkedService().p_userName}",
+			"password": "@{linkedService().p_password}",
+			"alwaysEncryptedSettings": {
+				"alwaysEncryptedAkvAuthType": "ManagedIdentity"
+			}
+		}
+	}
+}
